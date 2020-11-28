@@ -1,0 +1,24 @@
+<p>
+  <mat-toolbar color="primary" class="navbar">
+
+    <div>
+      <span>Posts App</span>
+      <span class="example-spacer"></span>
+
+      <button mat-icon-button class="avatar example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon title="Cerrar Sesión" (click)="cerrarSesion()" >exit_to_app</mat-icon>
+      </button>      
+    </div>
+
+    <div class="banner-usuario">
+      <button mat-icon-button class="avatar example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>person_pin</mat-icon>
+      </button>
+      <div class="ml-4">
+        <h4 style="margin: 0;">{{ usuario.usuario }}</h4>
+        <small style="display:block; margin:0;">{{ usuario.usuario }} </small>
+      </div>
+    </div>
+
+  </mat-toolbar>
+</p>

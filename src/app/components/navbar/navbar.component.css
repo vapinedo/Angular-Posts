@@ -1,0 +1,8 @@
+.navbar, .banner-usuario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mat-icon{
+    font-size: 4em;
+}

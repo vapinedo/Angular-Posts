@@ -1,0 +1,19 @@
+/* Structure */
+table {
+    width: 100%;
+}
+
+.ver-comentario {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button {
+    margin-left: 70px;
+}

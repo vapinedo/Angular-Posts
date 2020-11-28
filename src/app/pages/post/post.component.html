@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="cabecera">
+        <div>
+            <h2>Id: <small>{{ post.id  }}</small></h2>
+            <h1>UserId: <small>{{ post.userId }}</small></h1>
+        </div>
+        <button mat-raised-button color="warn" [routerLink]="['/posts']">Regresar</button>
+    </div>
+
+    <form class="form-add-product" (ngSubmit)="submit( formulario )" #formulario="ngForm"> 
+        <mat-form-field>
+            <mat-label>Title</mat-label>
+            <input matInput 
+                name="title" 
+                #title="ngModel" 
+                type="text" 
+                [(ngModel)]="post.title" 
+                required>
+            <mat-error>Título es requerido</mat-error>
+        </mat-form-field>    
+        
+        <mat-form-field class="mt-5 mb-4">
+            <mat-label>Body</mat-label>
+            <textarea matInput 
+            rows="4"
+            name="body" 
+            #body="ngModel" 
+            type="text" 
+            [(ngModel)]="post.body" 
+            required>
+        </textarea>
+        <mat-error>Body es requerido</mat-error>
+        </mat-form-field>
+
+        <button type="submit" class="mr-3" mat-raised-button color="primary">Aceptar</button>
+        <button [routerLink]="['/posts']" type="button" mat-raised-button color="warn">Cancelar</button>
+    </form>
+</div>

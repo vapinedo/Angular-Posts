@@ -1,0 +1,12 @@
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button {
+    margin-left: 70px;
+}
+
+.mat-form-field {
+    width: 100%;
+}

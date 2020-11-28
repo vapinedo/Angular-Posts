@@ -1,0 +1,28 @@
+<div class="login">
+    <form (ngSubmit)="acceder( formulario )" #formulario="ngForm">
+
+        <mat-form-field>
+            <mat-label>Usuario</mat-label>
+            <input matInput 
+                name="usaurio" 
+                #title="ngModel" 
+                type="text" 
+                [(ngModel)]="usuario.usuario" 
+                required>
+        </mat-form-field>       
+
+        <mat-form-field>
+            <mat-label>Contraseña</mat-label>
+            <input matInput 
+                name="contrasenia" 
+                #title="ngModel" 
+                type="password" 
+                [(ngModel)]="usuario.contrasenia" 
+                required>
+        </mat-form-field>       
+
+        <div class="btn-acceder">
+            <button type="submit" mat-raised-button color="primary">Iniciar Sesión</button>
+        </div>
+    </form>
+</div>

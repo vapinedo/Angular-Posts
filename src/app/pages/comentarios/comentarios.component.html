@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="cabecera">
+        <div>
+            <h2>Post Id: <small>{{ post.id  }}</small></h2>
+            <h1>Título: <small>{{ post.title }}</small></h1>
+            <h3>Comentarios</h3>
+        </div>
+        <button mat-raised-button color="warn" [routerLink]="['/posts']">Regresar</button>
+    </div>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef style="width: 70px;"> Id </th>
+            <td mat-cell *matCellDef="let comentario"> {{ comentario.id }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let comentario"> {{ comentario.name }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let comentario"> {{ comentario.email }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="idDuplicado">
+            <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Comentarios </th>
+            <td mat-cell *matCellDef="let comentario" style="text-align: center;">
+                <a class="ver-comentario" (click)="verComentario( comentario.idDuplicado )" title="Ver Comentarios">
+                    <mat-icon>comment_bank</mat-icon>
+                </a>            
+            </td>
+        </ng-container>
+
+    </table>
+</div>
